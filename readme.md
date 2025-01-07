@@ -10,6 +10,24 @@ PO 模式，框架基本成型
 环境配置、allure 报告
 ## 第四天
 1. 搭建 jenkins，CI 执行
+- jenkins master搭建完成
+- 项目运行环境是 python3.6，而最新 python 是 3.11，搭建运行环境一种方式是更新依赖包，尝试了发现代码也需要变，但是不知道哪里错误；另一种方式是构建 3.6的环境，用容器方式运行项目，这种会更合适
+### 搭建运行环境
+1. 构建镜像文件：
+- 导出 conda配置：environment.yml ～～conda env export --name pytest-selenium-allure-awesome36 > environment.yml
+- 编写：Dockerfile 和 jenkins-agent.sh
+2. 制作镜像：
+docker build -t conda-jenkins-slave .
+3. 运行容器：
+```shell
+docker run -d \
+  --name conda-jenkins-slave \
+  -e JENKINS_URL=http://your-jenkins-master:8080 \
+  -e JENKINS_SECRET=your_agent_secret \
+  -e JENKINS_AGENT_NAME=conda-slave \
+  conda-jenkins-slave
+```
+
 2. 操作放到 json，关键字驱动
 ## 第五天
 pytest特性学习、listener 等高级技巧

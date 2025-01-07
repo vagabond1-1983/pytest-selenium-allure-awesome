@@ -1,6 +1,9 @@
 # 使用官方 Miniconda 镜像
 FROM continuumio/miniconda3:latest
 
+# 更换镜像源
+RUN sed -i 's|http://archive.ubuntu.com/ubuntu/|http://mirrors.aliyun.com/ubuntu/|g' /etc/apt/sources.list
+
 # 安装 Java（Jenkins Slave 需要）
 RUN apt-get update && \
     apt-get install -y openjdk-11-jre-headless && \
