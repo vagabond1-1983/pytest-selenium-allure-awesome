@@ -6,8 +6,6 @@ import pytest
 import yaml
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
 
 # ../../../testcases(conftest.py)
 ROOT_PATH = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
