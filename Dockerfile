@@ -1,14 +1,5 @@
 # 使用官方 Miniconda 镜像
-FROM continuumio/miniconda3:latest
-
-# 更换镜像源
-RUN sed -i 's|http://archive.ubuntu.com/ubuntu/|http://mirrors.aliyun.com/ubuntu/|g' /etc/apt/sources.list
-
-# 安装 Java（Jenkins Slave 需要）
-RUN apt-get update && \
-    apt-get install -y openjdk-11-jre-headless && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+FROM datadevops/conda-jenkins-slave:latest
 
 # 复制 Conda 环境文件
 COPY environment.yml /tmp/environment.yml

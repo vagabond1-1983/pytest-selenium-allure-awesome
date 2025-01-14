@@ -9,7 +9,7 @@ PO 模式，框架基本成型
 ## 第三天
 环境配置、allure 报告
 ## 第四天
-1. 搭建 jenkins，CI 执行
+1. 搭建 jenkins，CI 执行--不成功
 - jenkins master搭建完成
 - 项目运行环境是 python3.6，而最新 python 是 3.11，搭建运行环境一种方式是更新依赖包，尝试了发现代码也需要变，但是不知道哪里错误；另一种方式是构建 3.6的环境，用容器方式运行项目，这种会更合适
 ### 搭建运行环境
@@ -28,6 +28,13 @@ docker run -d \
   conda-jenkins-slave
 ```
 
-2. 操作放到 json，关键字驱动
 ## 第五天
-pytest特性学习、listener 等高级技巧
+1. CI运行
+用镜像方式构建出jenkins slave 碰到了阻碍。申请的 ECS 性能差，调试慢。
+先用本机搭建一个 jenkins，然后本地创建 job 运行。先不走镜像方式。
+参看 Jenkinsfile，在配置过程中碰到了 conda 环境问题。有点懂了，每个 sh 都是独立的，环境切换后需要直接执行 python 脚本。
+
+# 待办
+- 操作放到 json，关键字驱动
+- pytest特性学习、listener 等高级技巧
+- jenkins slave 镜像方式运行脚本

@@ -147,5 +147,5 @@ cython_debug/
 # VSCode
 .vscode
 
-allure-result/
+allure-results/
 .pytest_cache/
