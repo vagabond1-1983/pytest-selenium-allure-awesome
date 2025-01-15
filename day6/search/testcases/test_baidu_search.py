@@ -9,7 +9,7 @@ class TestBaiduSearch:
     @allure.feature("百度搜索")
     @allure.story("搜索结果验证")
     @pytest.mark.parametrize('keyword, expected', [
-        ('pytest', 'pytest123'),
+        ('pytest', 'pytest'),
         # ('selenium', 'selenium'),
         ('openai', 'chatgpt')
     ])

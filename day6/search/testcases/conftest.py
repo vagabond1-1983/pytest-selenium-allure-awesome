@@ -7,8 +7,8 @@ import yaml
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
-from day6.driver.webdriver_extended import WebDriverExtended
-from day6.driver.webdriver_listener import WebDriverListener
+from day6.common.driver.webdriver_extended import WebDriverExtended
+from day6.common.driver.webdriver_listener import WebDriverListener
 from day6.utils.screenshot_extensions import ScreenShotExtensions
 
 # ../../../testcases(conftest.py)

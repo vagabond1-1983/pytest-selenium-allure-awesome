@@ -3,7 +3,9 @@ import os
 from selenium.webdriver.remote.webdriver import WebDriver
 import allure
 import time
-
+"""
+废弃，此方法需要重写 webdriver 和 webelement 侵入性高，不如 event listener 方便
+"""
 
 class AutoScreenshotDriver(WebDriver):
     def __init__(self, *args, **kwargs):

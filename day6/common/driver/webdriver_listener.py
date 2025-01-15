@@ -1,15 +1,20 @@
 import logging
 import datetime
+import os
+
 from selenium.webdriver.support.events import AbstractEventListener
 
 from day6.utils.screenshot_extensions import ScreenShotExtensions
+
+# ../../../xx.log
+ROOT_PATH = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
 
 
 class WebDriverListener(AbstractEventListener):
     log_filename = datetime.datetime.now().strftime("%Y%m%d")
     logging.basicConfig(
         # log file will be created in "tests" directory. Feel free to change the path or filename
-        filename=f"{log_filename}.log",
+        filename=os.path.join(ROOT_PATH, f"{log_filename}.log"),
         format="%(asctime)s: %(levelname)s: %(message)s",
         level=logging.INFO
     )
