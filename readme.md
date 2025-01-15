@@ -34,6 +34,10 @@ docker run -d \
 先用本机搭建一个 jenkins，然后本地创建 job 运行。先不走镜像方式。
 参看 Jenkinsfile，在配置过程中碰到了 conda 环境问题。有点懂了，每个 sh 都是独立的，环境切换后需要直接执行 python 脚本。
 
+## 第六天
+1. 框架在关键点截图
+2. 失败截图
+
 # 待办
 - 操作放到 json，关键字驱动
 - pytest特性学习、listener 等高级技巧

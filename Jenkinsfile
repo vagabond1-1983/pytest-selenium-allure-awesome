@@ -46,7 +46,7 @@ pipeline {
                         source /opt/anaconda3/etc/profile.d/conda.sh
                         conda activate ${VENV_PATH}
                         conda info -e
-                        pytest -s day3/search/testcases/testBaiduSearch.py --alluredir=allure-results
+                        pytest -s day6/search/testcases/testBaiduSearch.py --alluredir=allure-results
                     """
                 }
             }
@@ -67,7 +67,7 @@ pipeline {
             // 清理虚拟环境
             // sh "rm -rf ${VENV_PATH}"
             // 清理 allure-results 目录
-            sh "rm -rf allure-results"
+            sh "rm -rf ./allure-results ./screenshots"
         }
     }
 }

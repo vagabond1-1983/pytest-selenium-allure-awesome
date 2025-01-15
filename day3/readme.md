@@ -9,7 +9,7 @@
 ## allure配置
 1. 用 pytest 运行测试用例并启动 allure 结果生成
 ```commandline
-pytest -s day3/search/testcases/testBaiduSearch.py -v --alluredir ./allure_result
+pytest -s day3/search/testcases/testBaiduSearch.py -v --alluredir ./allure_results
 ```
 2. 在线生成 allure 报告
 ```commandline
