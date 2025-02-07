@@ -38,6 +38,12 @@ docker run -d \
 1. 框架在关键点截图
 2. 失败截图
 
+## 第七天
+- 用 mybatis 的 pet 靶场，替换百度的例子：https://petstore.octoperf.com/actions/Catalog.action
+1. 实现登录--done
+2. 实现下单流程
+3. 改造 log 方式，用全局 logger 方式，这样每个类都有一致的输出方式。配置从os.env中获取
+
 # 待办
 - 操作放到 json，关键字驱动
 - pytest特性学习、listener 等高级技巧

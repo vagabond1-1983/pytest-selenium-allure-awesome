@@ -1,0 +1,5 @@
+global:
+  base_url: https://petstore.octoperf.com/actions/Catalog.action
+  login_url: https://petstore.octoperf.com/actions/Account.action?signonForm=
+  username: vaga
+  password: 1qaz@WSX
