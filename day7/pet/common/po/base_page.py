@@ -20,9 +20,7 @@ class Base:
         password_input.send_keys(envs['global']['password'])
         logging.info(f"输入用户名：{envs['global']['username']}/密码：{envs['global']['password']}")
         try:
-            submit_button = driver.find_element(by=By.CSS_SELECTOR, value="input[name='signon']")
-            print(f'submit button: {submit_button.is_enabled()} & {submit_button.is_displayed()}')
-            submit_button.click()
+            driver.find_element(by=By.CSS_SELECTOR, value="input[name='signon']").click()
         except Exception as e:
             print(f'发生错误{e}')
         logging.info(f"账户：{envs['global']['username']}进行登录操作")

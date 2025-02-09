@@ -9,4 +9,6 @@ class TestPetOrder:
     def test_pet_order(self, setup, envs):
         driver = setup
         petLoginPO = PetOrderPO(driver, envs)
-        petLoginPO.order_single_good()
+        order_msg = petLoginPO.order_single_good()
+        print(f"message popup after order: {order_msg}")
+        assert order_msg == "Thank you, your order has been submitted."
