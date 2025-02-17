@@ -27,3 +27,4 @@ webdriver-manager==3.4.0
 xlrd==1.2.0
 zipp==0.6.0
 pytest-yaml
+loguru
