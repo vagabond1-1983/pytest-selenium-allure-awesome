@@ -47,8 +47,8 @@ docker run -d \
 1. 改造 log 方式，用全局 logger 方式，这样每个类都有一致的输出方式。配置从os.env中获取
 
 ## 第九天
-- 画出框架架构图
-- jenkinsfile更新，跑 day8
+- 画出框架架构图--done
+- jenkinsfile更新，跑 day8--done
 
 # 待办
 - 操作放到 json，关键字驱动

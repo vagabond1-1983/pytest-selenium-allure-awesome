@@ -46,7 +46,7 @@ pipeline {
                         source /opt/anaconda3/etc/profile.d/conda.sh
                         conda activate ${VENV_PATH}
                         conda info -e
-                        pytest -s day6/search/testcases/test_baidu_search.py --alluredir=allure-results
+                        pytest -s day8/pet/order/testcases/test_pet_order.py --alluredir=allure-results
                     """
                 }
             }
